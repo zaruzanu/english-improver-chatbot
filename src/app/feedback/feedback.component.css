@@ -1,0 +1,10 @@
+feedback-container {
+    max-width: 600px;
+    margin: 150px auto;
+    padding: 16px;
+    text-align: center;
+    background-image: url(https://th.bing.com/th/id/OIP.EaQW-qShhLFDHzXO2rbpqAHaFS?rs=1&pid=ImgDetMain);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }

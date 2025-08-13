@@ -1,0 +1,23 @@
+<!-- Grammar Phase Styled with Public Speaking CSS -->
+<div class="chat-wrapper">
+  <div class="chat-container">
+
+    <!-- Chat Header -->
+    <div class="chat-header">
+      <h1>English Improver Chatbot</h1>
+    </div>
+    <!-- Chat Section -->
+    
+      <!-- Chat Messages -->
+      <div class="chat-messages" id="chat-messages" #chatMessages></div>
+
+      <!-- Chat Input Area -->
+      <div class="chat-input-area">
+        <input type="text" #userInput placeholder="Type your message" />
+        <button (click)="handleTextInput(userInput.value); userInput.value=''">Send</button>
+        <span *ngIf="isLoading" class="loading-spinner"></span>
+      </div>
+    </div>
+
+  </div>
+<a href="javascript:history.back()" class="back-arrow">&#8592;</a>

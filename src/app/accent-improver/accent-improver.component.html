@@ -1,0 +1,36 @@
+<div class="accent-container">
+  <div class="chat-wrapper">
+    <!-- Header -->
+    <div class="chat-header">
+      <h2>Accent Improver Chatbot</h2>
+      <p>Practice and perfect your pronunciation in any accent</p>
+    </div>
+
+    <!-- Accent Dropdown -->
+    <div class="accent-select">
+      <label>Select Accent:</label>
+      <select [(ngModel)]="selectedAccent">
+        <option *ngFor="let accent of accents" [value]="accent.value">{{ accent.label }}</option>
+      </select>
+    </div>
+
+    <!-- Chat Messages -->
+    <div class="chat-messages" id="chat-messages">
+      <div *ngFor="let msg of messages" class="chat-bubble" [ngClass]="msg.type">
+        <p>{{ msg.text }}</p>
+        <!-- autoplay hataya -->
+        <audio *ngIf="msg.audio" [src]="msg.audio + '?v=' + audioVersion" controls></audio>
+      </div>
+    </div>
+
+    <!-- Record Button -->
+    <div class="chat-controls">
+      <button (click)="toggleRecording()">
+        🎤 {{ isRecording ? 'Stop Recording' : 'Start Speaking' }}
+      </button>
+      <div *ngIf="loading" class="loading-spinner">⏳ Processing...</div>
+    </div>
+  </div>
+</div>
+
+<a href="javascript:history.back()" class="back-arrow">&#8592;</a>

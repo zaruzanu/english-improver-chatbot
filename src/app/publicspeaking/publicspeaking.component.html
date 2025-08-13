@@ -1,0 +1,42 @@
+<!-- Particles Background -->
+<div id="tsparticles" style="position: fixed; width: 100%; height: 100%; z-index: -1;"></div>
+
+<!-- Fullscreen Chat Interface -->
+<div class="chat-wrapper">
+  <div class="chat-container">
+
+    <!-- Header -->
+    <div class="chat-header">
+      <h1>💬 English Improver Chatbot</h1>
+      <p>Speak confidently with professional tone ✨</p>
+    </div>
+    <!-- Tone Selection -->
+    <div class="tone-select">
+      <label for="tone">Select Tone:</label>
+     <select id="tone" [(ngModel)]="selectedTone" name="tone">
+        <option value="formal">✨ Formal</option>
+        <option value="assertive">💼 Assertive</option>
+        <option value="friendly">🌿 Friendly</option>
+        <option value="confident">🎤 Confident</option>
+        <option value="motivational">🌟 Motivational</option>
+      </select>
+    </div>
+
+    <!-- Chat Messages -->
+    <div class="chat-messages" id="chat-messages">
+      <div *ngFor="let msg of messages" class="chat-bubble" [ngClass]="msg.type">
+        <p>{{ msg.text }}</p>
+        <audio *ngIf="msg.audio" [src]="msg.audio" controls></audio>
+      </div>
+    </div>
+
+    <!-- Button at bottom -->
+    <div class="chat-input-area">
+      <button (click)="toggleRecording()">
+        {{ isRecording ? '⏹️ Stop' : '🎙️ Start Recording' }}
+      </button>
+    </div>
+
+  </div>
+</div>
+<a href="javascript:history.back()" class="back-arrow">&#8592;</a>

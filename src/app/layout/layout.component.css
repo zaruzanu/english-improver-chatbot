@@ -1,0 +1,44 @@
+/* Reset & Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004080;
+  color: white;
+  padding: 15px 30px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+.main-content {
+  padding: 10px;
+  min-height: 70vh;
+}
+
+/* Footer styles */
+.footer {
+  background: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}

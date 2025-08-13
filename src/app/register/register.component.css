@@ -1,0 +1,124 @@
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url('https://images.unsplash.com/photo-1542326237-94bcb35e1d7b?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(12px) brightness(0.5);
+}
+
+.auth-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.auth-container {
+  background: rgba(30, 30, 60, 0.4);
+  backdrop-filter: blur(20px);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  text-align: center;
+  color: #fff;
+}
+
+.auth-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #00ffe5;
+  text-shadow: 0 0 10px #00ffe5;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.input-box .icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0ff;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.input-box input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  box-shadow: 0 0 10px #00ffe5;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #00ffd5;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 12px #00ffe5;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #0ff;
+  transform: scale(1.03);
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+.switch-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.switch-link a {
+  color: #00ffd5;
+  text-decoration: underline;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease;
+}
+
+.back-arrow:hover {
+  background-color: #ddd;
+}

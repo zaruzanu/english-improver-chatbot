@@ -1,0 +1,94 @@
+/* File: styles.css */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Disable scrolling */
+}
+main, body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: linear-gradient(rgba(13, 12, 12, 0.155), rgba(9, 10, 11, 0.5)), 
+  url(https://chatlayer.ai/wp-content/uploads/2022/04/Lingustics-Featured-Image-Blog-EN-EN-1-91-1-01.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Ensure full height on all devices */
+
+  box-sizing: border-box;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  max-width: 1430px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 1.2em;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.option {
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(42, 138, 249, 0.7);
+}
+
+.about {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-align: left;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+/* 📱 Responsive font sizes for smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1em;
+  }
+  .option {
+    font-size: 1em;
+    padding: 12px 20px;
+  }
+}

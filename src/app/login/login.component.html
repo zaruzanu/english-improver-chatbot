@@ -1,0 +1,48 @@
+<div class="auth-wrapper">
+  <div class="auth-container">
+    <h2 class="auth-title">Login</h2>
+
+    <form>
+      <div class="input-box">
+        <span class="icon">
+          <i class="fa-solid fa-envelope"></i>
+        </span>
+        <input
+          type="email"
+          [(ngModel)]="userObj.email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+      </div>
+
+      <div class="input-box">
+        <span class="icon">
+          <i class="fa-solid fa-lock"></i>
+        </span>
+        <input
+          type="password"
+          [(ngModel)]="userObj.password"
+          placeholder="Password"
+          required
+          name="password"
+        />
+      </div>
+
+      <div class="remember-forgot">
+        <label><input type="checkbox" /> Remember me</label>
+        <a href="#">Forgot password?</a>
+      </div>
+
+      <button type="button" (click)="onlogin()">Login</button>
+
+      <div class="switch-link">
+        Don't have an account? <a routerLink="/register">Register</a>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Top-left corner arrow -->
+<a href="javascript:history.back()" class="back-arrow">
+  &#8592;
+</a>

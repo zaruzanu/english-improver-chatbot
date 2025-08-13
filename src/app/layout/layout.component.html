@@ -1,0 +1,12 @@
+<div class="navbar">
+  <h1>English Improver Chatbot</h1>
+  <nav>
+    <!-- When NOT logged in -->
+    <a routerLink="/register" routerLinkActive="active" *ngIf="!isEmailProvided">Register</a>
+    <a routerLink="/login" routerLinkActive="active" *ngIf="!isEmailProvided">Login</a>
+    <!-- When logged in -->
+    <a (click)="logout()" *ngIf="isEmailProvided" style="cursor: pointer;">Logout</a>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
